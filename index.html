@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samrat Upwanshi - Music Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #333333; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        
+        .top-section { background-color: #ffffff; padding: 20px 0; border-bottom: 1px solid #eeeeee; margin-bottom: 30px; }
+        
+        .main-heading { font-size: 1.8rem; font-weight: 600; color: #333333; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .page-banner { display: block; width: 100%; text-align: center; }
+        .banner-image { width: 100%; max-width: 1100px; height: auto; border-radius: 12px; }
+        
+        .artist-links { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+        .artist-links .platform-link { font-size: 28px; transition: transform 0.2s ease; }
+        .artist-links .platform-link:hover { transform: scale(1.15); }
+        .artist-links .platform-logo-img { height: 28px; filter: grayscale(0%) opacity(100%); }
+        .artist-links .platform-link-img:hover .platform-logo-img { transform: none; }
+        
+        .artist-links .platform-link.spotify { color: #1DB954; }
+        .artist-links .platform-link.apple { color: #fc3c44; }
+        .artist-links .platform-link.youtube { color: #FF0000; }
+        .artist-links .platform-link.amazon { color: #00A8E1; }
+
+        h2.section-title { font-size: 2.5rem; margin-bottom: 30px; font-weight: 700; color: #333333; }
+        
+        .music-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; justify-items: center; }
+
+        .music-card { display: flex; flex-direction: column; border-radius: 12px; padding: 20px; border: 1px solid #8f8585; box-shadow: 0 2px 4px rgba(0,0,0,0.02); text-align: left; transition: transform 0.2s ease, box-shadow 0.2s ease; width: 100%; box-sizing: border-box; height: 100%; }
+        .music-card:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.08); }
+        .music-title { font-size: 1.2rem; font-weight: 600; color: #ffffff; margin-top: 0; margin-bottom: 5px; line-height: 1.3; }
+        
+        .card-bottom { margin-top: auto; }
+        .music-meta { font-size: 0.85rem; color: #888888; margin-top: 0; margin-bottom: 20px; }
+
+        .platform-link { color: #ffffff; text-decoration: none; transition: color 0.2s ease, transform 0.2s ease; display: inline-flex; align-items: center; }
+        .platform-link.spotify:hover { color: #1DB954; }
+        .platform-link.apple:hover { color: #fc3c44; }
+        .platform-link.youtube:hover { color: #FF0000; }
+        .platform-link.amazon:hover { color: #00A8E1; }
+        .platform-logo-img { vertical-align: middle; border-radius: 4px; filter: grayscale(100%) opacity(65%); transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease; }
+        .platform-link-img:hover .platform-logo-img { filter: grayscale(0%) opacity(100%); transform: scale(1.1); }
+
+        .music-card .platforms { display: flex; gap: 12px; align-items: center; justify-content: flex-start; flex-wrap: wrap; margin-bottom: 20px; }
+        .music-card .platform-link { font-size: 20px; }
+        .music-card .platform-logo-img { height: 20px; }
+
+        .spotify-preview { width: 100%; height: 152px; border: none; overflow: hidden; border-radius: 8px; display: block; margin-bottom: 15px; }
+
+        @media (max-width: 900px) { .music-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .music-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="top-section">
+        <div class="container">
+            <h1 class="main-heading">Welcome to the Divine Musical World of Samrat Upwanshi</h1>
+            <header class="page-banner">
+                <img src="./images/banner.jpg" alt="Samrat Upwanshi Devotional Music Banner" class="banner-image">
+            </header>
+            
+            <div class="artist-links">
+                <a href="https://open.spotify.com/artist/2muO1dxrqP2FkbjWk4QpxQ" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                <a href="https://music.apple.com/us/artist/samrat-upwanshi/1867500519" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                <a href="https://youtube.com/@desiswagaudio" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://music.amazon.in/artists/B0GFPRGSMH/samrat-upwanshi" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                <a href="https://gaana.com/artist/samrat-upwanshi" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                <a href="https://www.jiosaavn.com/artist/samrat-upwanshi/cnRmqBs,bpI_" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                <a href="https://music.youtube.com/@DesiSwagAudio" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <main>
+            <h2 class="section-title">Listen Our Songs</h2>
+            <div class="music-grid">
+                
+                <article class="music-card" style="background-color: #16100e;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/0QAUasVdBEbkYcUcK5RDU1?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">SHIV RUDRA MALA</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">Latest Release • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/0QAUasVdBEbkYcUcK5RDU1" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="#" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/6pWqtNOd22k" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="https://gaana.com/song/shiv-rudra-mala" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="https://www.jiosaavn.com/album/shiv-rudra-mala/w7E4GnZ724w_" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=2JqoDlho4M0&si=EyqonEnffWRyZgA9" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #020830;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/6bXleiNLHx5LvrSkz9KIyb?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">KASHI MEIN TU VISHWANATH HAI</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/6bXleiNLHx5LvrSkz9KIyb?si=166ac259f95a4757" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/kashi-mein-tu-vishwanath-hai-ujjain-mein-sarkar/1868001879" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/SQQ7gEUx4tA" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GG4S71BT?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_imG8RLsEwG5CdI52atslF47bo&trackAsin=B0GG5GW8FC" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="https://gaana.com/song/kashi-mein-tu-vishwanath-hai-ujjain-mein-sarkar" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="https://www.jiosaavn.com/song/kashi-mein-tu-vishwanath-hai-ujjain-mein-sarkar/BRkTXzBIWAI" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=aRlpymdR_c4&si=U4UmqEjvSVZKzLAT" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #381018;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/6fRAmvGdctZfldsBGLf6Vp?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">HANUMAN CHALISA</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/6fRAmvGdctZfldsBGLf6Vp?si=82ca5420dc4a450f" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/hanuman-chalisa/1872953278" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/adbvZq4Mx98" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GK8NP5Q3?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_cM3KslUUVCrF90LiYBLHvsF92&trackAsin=B0GK8DR3ZT" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=_dMsrk8XNbQ&si=Kt_RvUNrhKiqtahB" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #ac0101;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/43FzJajOMBwww6JzeilMnT?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">MERE PRIY RAGHUNATH JI</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/43FzJajOMBwww6JzeilMnT?si=c688ef2c31204166" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/mere-priy-raghunath-ji-enhanced-version/1889065539" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/vaY03Sb9FqE" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GV8R5MBF?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_KFwS9nlsqBgNb2ti5GQXeI5vq&trackAsin=B0GV8TJVXT" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="https://gaana.com/song/mere-priy-raghunath-ji" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="https://www.jiosaavn.com/song/mere-priy-raghunath-ji/JRFeYSRZdl4" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=jFC5VQf3cHc&si=tRXWiluaaWlOinGn" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #886000;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/2sNXmDRsTQZXpQAcDnlt15?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">SHRI HANUMANT KRIPA KAR DINHA</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">Latest Release • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/2sNXmDRsTQZXpQAcDnlt15" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/shri-hanumant-kripa-kar-dinha/1889385818" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/XjGxBZNoGyE" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GVFN6KD8?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_tMIP1teAaK66v4pccIjFlV9sQ&trackAsin=B0GVFSJPCT" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=ehOe-n6edi4&si=Yedxk0NG3vrEZU7k" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #740029;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/4YwcHal06TuovhLj8m8C8S?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">SHIV HI AADI SHIV HI ANT</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">Latest Release • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/4YwcHal06TuovhLj8m8C8S?si=aa47e624ccef45b2" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/shiv-hi-aadi-shiv-hi-ant-om-namah-shivaay/1868039599" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/mIR-PpczvfA" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GG4S71BT?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_9Nctzst0JoufHuXivSatzIf7i&trackAsin=B0GG5GW8FC" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="https://gaana.com/song/shiv-hi-aadi-shiv-hi-ant-om-namah-shivaay" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="https://www.jiosaavn.com/song/shiv-hi-aadi-shiv-hi-ant-om-namah-shivaay/QlsFZBcGZHU" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=6Tq4vd5TuMQ&si=QOjsd09wY7TvFTYO" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #3f1b05;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/5ngEOWlgsuecayDaHXUrom?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">HEY SHIV SHANKAR, SHAMBHU MERE</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/5ngEOWlgsuecayDaHXUrom?si=bd39d25b6f1e4a3a" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/hey-shiv-shankar-shambhu-mere/1879569431" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/vHItp2UKH4g" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GPL12J4X?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_6seSDZv0CK7OIcGppwaPhEVd2&trackAsin=B0GPKN4Z81" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=tKxl0ScamvY&si=ukIQv8mBWhj_b2UB" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #2f0707;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/09RG6xCODgWJKWHVfrGO2z?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">MAA JAG KALYANI HAI</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/09RG6xCODgWJKWHVfrGO2z?si=011bc71521ea40cf" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/maa-jag-kalyani-hai/1887005823" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/Lil4d7KnVsw" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GTFYV74Q?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_kXe1GgF9ocKBfrZF0CXlBuSnc&trackAsin=B0GTGB3TB3" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=wxRALDgn7vk&si=BzObLsvvuxOJyEfJ" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #07272f;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/4gdtCYHSGyFJcpsrpATb2D?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">KRIPA HAI SHRI RAGHUVAR KI</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/4gdtCYHSGyFJcpsrpATb2D?si=c6dc8f40972844f2" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/mujhpar-kripa-hai-shri-raghuvar-ki/1880304085" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/CUZa4UrhKa0" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GPWLFLPT?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_eHXLEyMw6owWS6ATHQ27Nn8Wr&trackAsin=B0GPX4GF47" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=VNfrwevNsaQ&si=u482ejXLEOe-ZW6j" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #1a072f;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/10WVTS7N49ffNgHyyUNOBg?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">RADHE SANG HOLI HAI</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/10WVTS7N49ffNgHyyUNOBg?si=834111a597ca410e" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/radhe-sang-holi-hai/1881156786" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/kkc4XG1M6og" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GQJVJ28R?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_d3pdJZbXCRfb9jmi30jPbEYvu&trackAsin=B0GQJVG4PC" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=ekVtGdUzj5E&si=uLYFzoELCAZJj7-6" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #3a2104;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/2a9MGOJqCN04ImXLKEn6M9?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">SANKAT MOCHAN NAAM TUMHARA</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/2a9MGOJqCN04ImXLKEn6M9" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/sankat-mochan-naam-tumhara-ram-siya-ke-kaaj-saware/1867575526" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/XSUYXPdHzJ4" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GFPB9H1K?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_G4WPt712g9VBKEQfAUrn4UYFd&trackAsin=B0GFPJKN37" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=2kRFF6yq8ac&si=gPxTSaYL6OveXEeN" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #32465a;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/4KqMBaxzgTxuDJztYfhMI7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">AAYI MAHASHIVRATRI HAI</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/4KqMBaxzgTxuDJztYfhMI7" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/aayi-maha-shivratri-hai/1873927240" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/8qcABY-m4Tk" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GFPB9H1K?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_G4WPt712g9VBKEQfAUrn4UYFd&trackAsin=B0GFPJKN37" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=-HpNWZAtm4s&si=QqWI_jnOlYa8FdV7" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #4a325a;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/7mq3OFoxHbC0BtOpLgS220?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">RADHA RAMAN KRISHNA KANHAIYA</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/7mq3OFoxHbC0BtOpLgS220" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/radha-raman-shri-krishna-kanhaiya/1869438226" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/Q0mV0xXK-Tw" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GH1QGML9?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_CIZgih9gqof9kAxGqB3JwP4hs&trackAsin=B0GH28PBJP" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=QEOZ75x8u98&si=z3UmckPHn5ZYoL9q" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #740726;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/1zrK9htKfRt24jojuM4iAQ?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">HEY MAA JAGDAMBE</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/1zrK9htKfRt24jojuM4iAQ" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/namo-namo-hey-maa-jagdambe/1867575194" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/uDRBAPlOQnk" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GFPB9H1K?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_9WcOmtQm4adlEiY35t13M0vTG&trackAsin=B0GFPF4P7L" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=7k4m5gE2spE&si=wzUlroLRkugkFml0" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="music-card" style="background-color: #742607;">
+                    <iframe class="spotify-preview" src="https://open.spotify.com/embed/track/6hEg4pMDchD8kZcv8FhNuR?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" frameBorder="0" scrolling="no"></iframe>
+                    <h3 class="music-title">BHAJ BHOLA BHANDARI</h3>
+                    <div class="card-bottom">
+                        <p class="music-meta">2026 • Single</p>
+                        <div class="platforms">
+                            <a href="https://open.spotify.com/track/6hEg4pMDchD8kZcv8FhNuR" target="_blank" class="platform-link spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://music.apple.com/us/song/bhaj-bhola-bhandari-kashi-kitna-pyara-dhaam-hai/1867575530" target="_blank" class="platform-link apple"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://youtu.be/1n98IWufvOU" target="_blank" class="platform-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.amazon.in/albums/B0GFPB9H1K?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_sWq6Y68o1roHpBZCDJVGj8orB&trackAsin=B0GFPBML8Q" target="_blank" class="platform-link amazon"><i class="fa-brands fa-amazon"></i></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/gaana.png" alt="Gaana" class="platform-logo-img"></a>
+                            <a href="#" target="_blank" class="platform-link platform-link-img"><img src="./images/jiosaavn.webp" alt="JioSaavn" class="platform-logo-img"></a>
+                            <a href="https://music.youtube.com/watch?v=dauf1xmIS_4&si=fZwcyZP-75o0EHFr" target="_blank" class="platform-link platform-link-img"><img src="./images/YouTubeMusic_Logo.png" alt="YoutubeMusic" class="platform-logo-img"></a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+
+        <footer style="margin-top: 50px; padding: 20px 0; border-top: 1px solid #eeeeee; text-align: center; color: #888888; font-size: 0.9rem;">
+            <p>© 2026 Samrat Upwanshi. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
